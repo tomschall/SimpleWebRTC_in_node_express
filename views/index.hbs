@@ -13,11 +13,11 @@
                 height: 150px;
                 float: left;
             }
-            .videoContainerRight {
+            .videoContainerRemote {
                 position: relative;
                 top: 20px;
-                width: 600px;
-                height: 450px;
+                width: 400px;
+                height: 300px;
                 left: 10px;
                 float: left;
             }
@@ -90,7 +90,7 @@
                 var remotes = document.getElementById('remotes');
                 if (remotes) {
                     var d = document.createElement('div');
-                    d.className = 'videoContainerRight';
+                    d.className = 'videoContainerRemote';
                     d.id = 'container_' + webrtc.getDomId(peer);
                     d.appendChild(video);
                     var vol = document.createElement('div');
