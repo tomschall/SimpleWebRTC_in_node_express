@@ -8,8 +8,18 @@
         <style>
             .videoContainer {
                 position: relative;
+                top: 20px;
+                width: 200px;
+                height: 150px;
+                float: left;
+            }
+            .videoContainerRight {
+                position: relative;
+                top: 20px;
                 width: 600px;
                 height: 450px;
+                left: 10px;
+                float: left;
             }
             .videoContainer video {
                 position: absolute;
@@ -32,10 +42,10 @@
             <button type="submit">Create it!</button>
         </form>
         <div class="videoContainer">
-            <video id="localVideo" style="height: 450px;" oncontextmenu="return false;"></video>
+            <video id="localVideo" oncontextmenu="return false;"></video>
             <div id="localVolume" class="volume_bar"></div>
         </div>
-        <div id="remotes"></div>
+        <div id="remotes" .videoContainerRight></div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script src="/js/simplewebrtc-with-adapter.bundle.js"></script>
         <script>
@@ -80,7 +90,7 @@
                 var remotes = document.getElementById('remotes');
                 if (remotes) {
                     var d = document.createElement('div');
-                    d.className = 'videoContainer';
+                    d.className = 'videoContainerRight';
                     d.id = 'container_' + webrtc.getDomId(peer);
                     d.appendChild(video);
                     var vol = document.createElement('div');
