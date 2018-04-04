@@ -1,0 +1,45 @@
+{
+  "name": "simplewebrtc-in-node-express",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "lint": "jshint .",
+    "build": "node build.js",
+    "lint": "jshint src",
+    "validate": "npm ls"
+    
+  },
+  "dependencies": {
+    "attachmediastream": "^2.0.0",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "filetransfer": "^2.0.5",
+    "hbs": "~4.0.1",
+    "localmedia": "^4.0.2",
+    "mockconsole": "0.0.1",
+    "morgan": "~1.8.1",
+    "rtcpeerconnection": "^8.2.0",
+    "serve-favicon": "~2.4.2",
+    "socket.io-client": "^2.1.0",
+    "webrtcsupport": "^2.2.0",
+    "wildemitter": "^1.2.0"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
+  "devDependencies": {
+    "browserify": "^16.1.1",
+    "precommit-hook": "^3.0.0",
+    "request": "^2.85.0",
+    "tape": "^4.9.0",
+    "testling": "^1.7.1",
+    "travis-multirunner": "^4.4.1",
+    "uglify-js": "^3.3.18",
+    "webrtc-adapter": "^6.1.4"
+  }
+}
